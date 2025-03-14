@@ -10,15 +10,15 @@ public class Parqueaderocali {
         int opcion;
 
         do {
-            System.out.println("\nMenú opciones:");
-            System.out.println("1. Registrar moto");
-            System.out.println("2. Cobrar tarifa");
-            System.out.println("3. Visualizar estado parqueadero");
-            System.out.println("4. Abandonar menú");
+            System.out.println("\nMenú :");
+            System.out.println("1. Registrar moto®️");
+            System.out.println("2. Cobrar tarifa💰");
+            System.out.println("3. Visualizar estado parqueadero✔️");
+            System.out.println("4. Abandonar menú🔚");
             System.out.print("Digite una opción: ");
             opcion = sc.nextInt();
             sc.nextLine(); // Limpiar buffer
-
+            // REGISTRAR MOTO
             if (opcion == 1) {
                 System.out.println("Digite la placa de la moto:");
                 String placa = sc.next();
@@ -50,7 +50,9 @@ public class Parqueaderocali {
                         System.out.println("Posición ocupada o inválida.");
                     }
                 }
-            } else if (opcion == 2) {
+            }
+            // COBRAR TARIFA
+            else if (opcion == 2) {
                 System.out.println("Digite la placa de la moto:");
                 String placa = sc.next();
                 sc.nextLine(); // Limpiar buffer
@@ -84,6 +86,7 @@ public class Parqueaderocali {
                 if (!encontrada) {
                     System.out.println("Moto no encontrada.");
                 }
+                // VISUALIZAR ESTADO PARQUEADERO
             } else if (opcion == 3) {
                 System.out.println("Puestos de bajo cilindraje:");
                 for (int i = 0; i < 20; i++) {
@@ -94,7 +97,7 @@ public class Parqueaderocali {
                     System.out.println("Puesto " + (i + 1) + ": " + (altoCilindraje[i] == null ? "Libre" : "Ocupado"));
                 }
             }
-
+            // SALIR DEL PROGRAMA
         } while (opcion != 4);
 
         System.out.println("Abandonando programa!...");
